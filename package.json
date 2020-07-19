@@ -1,0 +1,21 @@
+{
+    "name": "travis-ci-node",
+    "version": "1.0.0",
+    "description": "Demo repository for learning travis-ci",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest"
+    },
+    "jest": {
+        "testEnvironment": "node"
+    },
+    "keywords": [
+        "travis-ci",
+        "node"
+    ],
+    "author": "malviyanshiv",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "^26.1.0"
+    }
+}
