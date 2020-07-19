@@ -7,5 +7,5 @@ test("testing increament with both arguments", () => {
 
 test("testing increament with default increment value", () => {
     const result = increament(10);
-    expect(result).toBe(12);
+    expect(result).toBe(11);
 });
