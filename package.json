@@ -4,7 +4,8 @@
     "description": "Demo repository for learning travis-ci",
     "main": "index.js",
     "scripts": {
-        "test": "jest"
+        "test": "jest",
+        "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls"
     },
     "jest": {
         "testEnvironment": "node"
@@ -16,6 +17,7 @@
     "author": "malviyanshiv",
     "license": "ISC",
     "devDependencies": {
+        "coveralls": "^3.1.0",
         "jest": "^26.1.0"
     }
 }
