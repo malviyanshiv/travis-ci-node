@@ -1,11 +1,13 @@
-const { increament } = require("../src/app");
+const request = require("supertest");
+const app = require("../src/app");
 
-test("testing increament with both arguments", () => {
-    const result = increament(10, 5);
-    expect(result).toBe(15);
+test("test for index page", async () => {
+    await request(app).get("/").expect(200);
 });
 
-test("testing increament with default increment value", () => {
-    const result = increament(10);
-    expect(result).toBe(11);
+test("Should confirm user login", async () => {
+    await request(app)
+        .post("/")
+        .send({ username: "malviyanshiv", password: "welcome@node" })
+        .expect(200);
 });
