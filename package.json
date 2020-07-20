@@ -2,8 +2,11 @@
     "name": "travis-ci-node",
     "version": "1.0.0",
     "description": "Demo repository for learning travis-ci",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
+        "start": "node index.js",
+        "dev": "env-cmd -f ./config/dev.env node index.js",
+        "dev-test": "env-cmd -f ./config/dev.env jest",
         "test": "jest",
         "coveralls": "jest --coverage && coveralls < coverage/lcov.info"
     },
@@ -19,6 +22,10 @@
     "devDependencies": {
         "coveralls": "^3.1.0",
         "env-cmd": "^10.1.0",
-        "jest": "^26.1.0"
+        "jest": "^26.1.0",
+        "supertest": "^4.0.2"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
     }
 }
